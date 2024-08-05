@@ -1,0 +1,1 @@
+Wi-Fi-Connect class for display 128 x 128
