@@ -1,5 +1,13 @@
+# This example was tested on MicroPython v1.23.0 on 2024-06-02; LOLIN_C3_MINI with ESP32-C3FH4
+
+# You can find original article https://electrocredible.com/raspberry-pi-pico-external-interrupts-button-micropython/
+# Here are some basic changes to make this code for my needs.
+
+
+
 import machine
 import time
+
 button = machine.Pin(3, machine.Pin.IN, machine.Pin.PULL_UP)
 button2 = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
 button3 = machine.Pin(1, machine.Pin.IN, machine.Pin.PULL_UP)
@@ -31,7 +39,7 @@ while True:
     first = button.value()
     time.sleep(0.01)
     second = button.value()
-    if first and not second:
-        print('Button 1 pressed!')
-    elif not first and second:
-        print('Button 1 released!')
+    # if first and not second:
+    #     print('Button 1 pressed!')
+    # elif not first and second:
+    #     print('Button 1 released!')
